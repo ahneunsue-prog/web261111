@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>내 영화 보드</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="top">
+    <h1>🎬 내 영화 보드</h1>
+    <nav>
+      <ul>
+        <li><a href="#mine">내 인생 영화</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 히어로 -->
+  <section class="hero">
+    <h2>내가 좋아하는 영화 이야기</h2>
+    <p>내 인생 영화 6편을 소개합니다.</p>
+    <p>다양한 영화들을 한눈에 만나보세요!</p>
+  </section>
+
+  <main>
+
+    <!-- 내 인생 영화 -->
+    <section id="mine">
+      <h2>내 인생 영화 6편</h2>
+
+      <!-- 영화 개수 및 정렬 -->
+      <div class="toolbar">
+        <p id="count"></p>
+
+        <label for="sort">정렬</label>
+        <select id="sort" onchange="applySort()">
+          <option value="rating">평점순</option>
+          <option value="year">최신 개봉순</option>
+          <option value="title">제목순</option>
+        </select>
+      </div>
+
+      <!-- 자바스크립트가 영화 카드를 생성하는 공간 -->
+      <section class="board" id="board">
+      </section>
+
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer>
+    <p>이 사이트는 TMDB API를 사용하지만 TMDB의 보증이나 인증을 받지 않았습니다.</p>
+    <p>This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
+
+    <p>영화 정보 및 포스터:
+      <a href="https://www.themoviedb.org"
+         target="_blank"
+         rel="noopener noreferrer">TMDB</a>
+    </p>
+  </footer>
+
+  <!-- 자바스크립트 연결 -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
